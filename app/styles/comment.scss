@@ -1,0 +1,9 @@
+@import "./colors.scss";
+
+.Comment {
+  border-bottom: 1px solid $grey2;
+  .Comment-content {
+    background-color: $primary2;
+    padding: 15px;
+  }
+}

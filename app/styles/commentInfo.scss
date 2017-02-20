@@ -1,0 +1,32 @@
+@import "colors";
+
+.Comment-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  .icon-person,
+  .icon-hourglass {
+    width: 13px;
+    height: 13px;
+    margin-right: 3px;
+  }
+
+  .icon-person {
+    fill: $primary1;
+  }
+
+  .icon-hourglass {
+    fill: $grey;
+  }
+
+  .Comment-by {
+    color: $primary1;
+    margin-right: 15px;
+    text-decoration: none;
+  }
+
+  .Comment-time {
+    color: $grey;
+  }
+}

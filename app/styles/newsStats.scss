@@ -1,0 +1,31 @@
+@import './colors';
+
+.News-stats {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+
+  .News-score {
+    padding: 4px;
+    background-color: darken($primary1, 5%);
+    color: $offWhite;
+    margin-right: 7px;
+    border-radius: 3px;
+  }
+
+  .News-by,
+  .News-time,
+  .News-commentsCount {
+    color: $offWhite;
+    text-decoration: none;
+    margin-right: 9px;
+  }
+
+  .icon-comments {
+    fill: $offWhite;
+    width: 17px;
+    height: 17px;
+    margin-right: 5px;
+  }
+
+}

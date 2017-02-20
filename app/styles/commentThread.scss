@@ -1,0 +1,44 @@
+.Comment-thread {
+  margin-left: 15px;
+  background-color: #F4F0ED;
+
+  .Comment-threadContainer > & {
+    margin-left: 0;
+  }
+}
+
+.Comment-threadContainer {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+
+  .Comment-btn-expand {
+    position: absolute;
+    top: 11px;
+    left: 3px;
+    font-size: 15px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.is-collapsed {
+    & > .Comment-thread > .Comment-childr {
+      display: none;
+    }
+  }
+
+  &.is-expanded {
+    & > .Comment-thread > .Comment-childr {
+      display: block;
+    }
+
+    .Comment-btn-expand svg {
+      transform: rotate(90deg);
+    }
+
+  }
+
+}
+

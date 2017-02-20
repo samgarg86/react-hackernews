@@ -3,7 +3,8 @@
   "env": {
     "browser": true,
     "node": true,
-    "mocha": true
+    "mocha": true,
+    "es6": true
   },
   "globals": {
     "expect": true,
@@ -30,7 +31,7 @@
   },
   "rules": {
     "no-var": 2,                     // http://eslint.org/docs/rules/no-var
-    "prefer-const": 2,               // http://eslint.org/docs/rules/prefer-const
+    "prefer-const": 0,               // http://eslint.org/docs/rules/prefer-const
 
     /**
      * Variables
@@ -38,7 +39,7 @@
     "no-shadow": 2,                  // http://eslint.org/docs/rules/no-shadow
     "no-shadow-restricted-names": 2, // http://eslint.org/docs/rules/no-shadow-restricted-names
     "no-undef": 2,                   // http://eslint.org/docs/rules/no-undef
-    "no-unused-vars": [2, {          // http://eslint.org/docs/rules/no-unused-vars
+    "no-unused-vars": [0, {          // http://eslint.org/docs/rules/no-unused-vars
       "vars": "local",
       "args": "after-used"
     }],
@@ -147,7 +148,7 @@
     "no-multiple-empty-lines": [2, { // http://eslint.org/docs/rules/no-multiple-empty-lines
       "max": 2
     }],
-    "no-nested-ternary": 2,          // http://eslint.org/docs/rules/no-nested-ternary
+    "no-nested-ternary": 0,          // http://eslint.org/docs/rules/no-nested-ternary
     "no-new-object": 2,              // http://eslint.org/docs/rules/no-new-object
     "no-spaced-func": 2,             // http://eslint.org/docs/rules/no-spaced-func
     "no-trailing-spaces": 2,         // http://eslint.org/docs/rules/no-trailing-spaces

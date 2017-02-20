@@ -10,13 +10,18 @@ A working example of a HackerNews client built using React/Redux/Webpack
 * SCSS
 * eslint to keep your js readable
 * Redux Thunk Middleware for async API fetches
-* Recursive actions to fetch comment threads
+* Recursive actions to fetch comment threads. Click on arrow icon to expand thread.
+* Fully Responsive
 
 
 ## Run the app
 
 0. ```npm install```
 0. ```npm start```
+
+## Route
+/       Defaults to news item ID 3410773  
+/{ID}   News with ID  
 
 Once running, if you want to hide the redux dev monitor: ```CTRL+H```
 

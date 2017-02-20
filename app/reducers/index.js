@@ -23,7 +23,7 @@ const assignCommentsRecursive = (existingComments, newComments, parentId) => {
     if(existingComments.has(parentId)) {
         existingComments.get(parentId).childr =  newComments;
     } else {
-        for (const [value] of existingComments) {
+        for (const [key, value] of existingComments) {
             value.childr && value.childr.size > 0 && assignCommentsRecursive(value.childr, newComments, parentId);
         }
     }
@@ -35,6 +35,11 @@ const commentsReducer = (state = {commentThreads: new Map(), isLoading: false}, 
             return update(state, { isLoading: true});
         }
         case actions.RECEIVE_COMMENTTHREADS: {
+            // Remove comment if deleted
+            for (const [key, value] of action.comments) {
+                value.deleted && action.comments.delete(key);
+            }
+
             // First level comments
             if(action.parentId === 0) {
                 return update(state, {commentThreads: action.comments, isLoading: false});

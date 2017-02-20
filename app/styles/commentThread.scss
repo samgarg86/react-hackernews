@@ -1,3 +1,4 @@
+@import 'colors';
 .Comment-thread {
   margin-left: 15px;
   background-color: #F4F0ED;
@@ -8,15 +9,21 @@
 }
 
 .Comment-threadContainer {
-  display: flex;
-  align-items: flex-start;
+  //display: flex;
+  //align-items: flex-start;
   position: relative;
 
   .Comment-btn-expand {
     position: absolute;
-    top: 11px;
+    top: 13px;
     left: 3px;
     font-size: 15px;
+
+    svg.icon-expand {
+      width: 12px;
+      height: 12px;
+      fill: $grey;
+    }
 
     &:focus {
       outline: none;
@@ -34,7 +41,7 @@
       display: block;
     }
 
-    .Comment-btn-expand svg {
+    .Comment-btn-expand svg.icon-expand {
       transform: rotate(90deg);
     }
 

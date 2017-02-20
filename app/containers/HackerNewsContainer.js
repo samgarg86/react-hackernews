@@ -28,7 +28,8 @@ class HackerNewsContainer extends Component {
 HackerNewsContainer.propTypes = {
     dispatch: PropTypes.func.isRequired,
     newsItem: PropTypes.object,
-    isLoading: PropTypes.bool
+    isLoading: PropTypes.bool,
+    params: PropTypes.object
 };
 
 const mapStateToProps = (state) => {

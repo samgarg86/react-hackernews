@@ -48,7 +48,7 @@ const requestCommentsRecursive = (parentComment, dispatch) => {
     if (!parentComment.childr && parentComment.kids && parentComment.kids.length > 0) {
         firebase.getItems(parentComment.kids, comments => {
             dispatch(receiveCommentThreads(comments, parentComment.id));
-            for (const [value] of comments) {
+            for (const [key, value] of comments) {
                 requestCommentsRecursive(value, dispatch);
             }
         });
@@ -67,10 +67,6 @@ export function fetchNews(id) {
                 dispatch(requestCommentThreads());
 
                 firebase.getItems(newsItem.kids, comments => {
-                    // Remove comment if deleted
-                    for (const [key, value] of comments) {
-                        if (value.deleted) comments.delete(key);
-                    }
                     dispatch(receiveCommentThreads(comments, 0));
                 });
             }

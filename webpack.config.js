@@ -24,15 +24,15 @@ module.exports = {
         // Pulls required scss files into main.css
         new ExtractTextPlugin('[name].css'),
         new HtmlWebpackPlugin({
-          template: 'app/index.tpl.html',
-          inject: 'body',
-          filename: 'index.html'
+            template: 'app/index.tpl.html',
+            inject: 'body',
+            filename: 'index.html'
         }),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
         new webpack.DefinePlugin({
-          'process.env.NODE_ENV': JSON.stringify('development')
+            'process.env.NODE_ENV': JSON.stringify('development')
         })
     ],
     // PostCSS runs after SCSS generates CSS. PostCSS allows us to do additional processing to the CSS. Most of it will
@@ -49,19 +49,18 @@ module.exports = {
         failOnError: false
     },
     module: {
-        // preLoaders: [
-        //     {
-        //         test: /\.js$/,
-        //         exclude: /node_modules/,
-        //         loader: 'eslint'
-        //     }
-        // ],
-        loaders: [
+        preLoaders: [
             {
-                test: /\.js?$/,
+                test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel'
-            },
+                loader: 'eslint'
+            }
+        ],
+        loaders: [{
+            test: /\.js?$/,
+            exclude: /node_modules/,
+            loader: 'babel'
+        },
             {
                 test: /\.json?$/,
                 loader: 'json'
@@ -70,8 +69,8 @@ module.exports = {
                 test: /\.scss$/,
                 loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!sass-loader')
             },
-            { test: /\.woff(2)?(\?[a-z0-9#=&.]+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff' },
-            { test: /\.(ttf|eot|svg)(\?[a-z0-9#=&.]+)?$/, loader: 'file' }
+            {test: /\.woff(2)?(\?[a-z0-9#=&.]+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff'},
+            {test: /\.(ttf|eot|svg)(\?[a-z0-9#=&.]+)?$/, loader: 'file'}
         ]
     }
 };

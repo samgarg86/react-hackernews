@@ -5,6 +5,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var StatsPlugin = require('stats-webpack-plugin');
+var autoprefixer = require('autoprefixer');
 
 module.exports = {
     // The entry file. All your app roots fromn here.
@@ -79,9 +80,8 @@ module.exports = {
             loader: 'json'
         }, {
             test: /\.scss$/,
-            // we extract the styles into their own .css file instead of having
-            // them inside the js.
-            loader: ExtractTextPlugin.extract('style', 'css?modules&localIdentName=[name]---[local]---[hash:base64:5]!sass')
+            // extract the styles into their own .css file
+            loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!sass-loader')
         }, {
             test: /\.woff(2)?(\?[a-z0-9#=&.]+)?$/,
             loader: 'url?limit=10000&mimetype=application/font-woff'
@@ -91,6 +91,9 @@ module.exports = {
         }]
     },
     postcss: [
-        require('autoprefixer')
-    ]
+        // Dynamically add vendor prefixes to properties that need it
+        autoprefixer({
+            browsers: ['> 0.5%'] // This is the same as the default for http://caniuse.com
+        })
+    ],
 };

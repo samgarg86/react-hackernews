@@ -1,9 +1,7 @@
 # React/Redux HackerNews Client
-A simple HackerNews reader
+A working example of a HackerNews client built using React/Redux/Webpack
 
-Contains: 
 * Using the webpack-react-redux boilerplate 
-* a working example of a HackerNews client built using React/Redux/Webpack
 * ES6 - 7 with Babel
 * Redux dev tools to keep track of the app's state
 * Routing

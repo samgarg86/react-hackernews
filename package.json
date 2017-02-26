@@ -14,7 +14,7 @@
     "react",
     "redux"
   ],
-  "author": "Jean-Pierre Sierens",
+  "author": "Sam Garg",
   "license": "MIT",
   "dependencies": {
     "compression": "^1.6.2",

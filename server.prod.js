@@ -6,7 +6,7 @@ var open = require('open');
 
 /*eslint-disable no-console */
 
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 3000;
 var app = express();
 
 // app.use(compression());

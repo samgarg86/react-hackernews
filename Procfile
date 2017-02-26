@@ -1,1 +1,1 @@
-web: babel-node tools/server.prod.js
+web: node tools/server.prod.js

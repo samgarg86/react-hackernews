@@ -22,6 +22,7 @@
     "firebase": "^2.3.2",
     "isomorphic-fetch": "^2.2.1",
     "moment": "^2.17.1",
+    "open": "0.0.5",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
     "react-hot-loader": "^3.0.0-beta.2",
@@ -29,8 +30,8 @@
     "react-router": "^2.4.0",
     "react-router-redux": "^4.0.4",
     "redux": "^3.5.2",
-    "superagent": "^3.4.3",
-    "redux-thunk": "^0.1.0"
+    "redux-thunk": "^0.1.0",
+    "superagent": "^3.4.3"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",

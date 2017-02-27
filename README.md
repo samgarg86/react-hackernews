@@ -1,6 +1,6 @@
 # React/Redux HackerNews Client
-https://react-hacker.herokuapp.com/13729525
-A working example of a HackerNews client with async comment threads, built using React/Redux/Webpack
+
+A working example of a HackerNews client with async comment threads, built using React/Redux/Webpack https://react-hacker.herokuapp.com/13729525  
 
 * Using the webpack-react-redux boilerplate 
 * ES6 - 7 with Babel
